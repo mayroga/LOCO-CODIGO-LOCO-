@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+google-generativeai
+openai
+requests
+gunicorn # Necesario para el despliegue en Render como Web Service
