@@ -103,6 +103,22 @@ button#continueBtn:hover {
     transform: translateY(-2px);
 }
 
+button#copyBtn {
+    background-color: #6c757d; /* Color gris para copiar */
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    max-width: 180px;
+    margin-left: auto; /* Alinearlo a la derecha en el contenedor */
+    display: block; /* Asegurar que se alinee */
+}
+
+button#copyBtn:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+
 .model-selection {
     text-align: center;
     margin-top: 15px;
@@ -123,21 +139,36 @@ button#continueBtn:hover {
     cursor: pointer;
 }
 
-#outputArea {
-    background-color: #ecf0f1;
+.output-section pre {
+    background-color: #ecf0f1; /* Fondo claro para pre */
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
-    white-space: pre-wrap; /* Preserve formatting and wrap text */
-    word-wrap: break-word; /* Break long words */
     min-height: 150px;
     max-height: 400px;
-    overflow-y: auto; /* Scroll for long outputs */
+    overflow-y: auto; /* Scroll para salidas largas */
     font-family: 'Consolas', 'Monaco', monospace;
     font-size: 0.9rem;
     color: #333;
     line-height: 1.4;
+    white-space: pre-wrap; /* Mantiene el formato y envuelve el texto */
+    word-wrap: break-word; /* Rompe palabras largas */
 }
+
+.output-section code {
+    /* Styles for code block inside pre, adjusted by highlight.js */
+    display: block; /* Ensure code block takes full width */
+    padding: 0; /* Highlight.js adds its own padding */
+    background: none; /* Highlight.js adds its own background */
+    color: inherit; /* Highlight.js handles text color */
+}
+
+.output-controls {
+    display: flex;
+    justify-content: flex-end; /* Alinea los controles a la derecha */
+    margin-bottom: 10px; /* Espacio entre el botón de copiar y el output */
+}
+
 
 #loading {
     text-align: center;
