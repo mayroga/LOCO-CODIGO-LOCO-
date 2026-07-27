@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maestro de Codificación AI</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Highlight.js para resaltado de sintaxis -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Maestro de Codificación AI</h1>
-        <p>Tu asistente experto para generar código y obtener soluciones.</p>
+        <p>Tu asistente experto para generar código y obtener soluciones en cualquier lenguaje.</p>
 
         <div class="input-section">
             <textarea id="promptInput" placeholder="Describe el código o la solución que necesitas... (Ej: 'Un script Python para leer un CSV', 'Cómo implementar CORS en Node.js')" rows="10"></textarea>
@@ -28,15 +30,20 @@
 
         <div class="output-section">
             <h2>Resultado:</h2>
-            <pre id="outputArea"></pre>
+            <div class="output-controls">
+                <button id="copyBtn" style="display:none;">Copiar al Portapapeles</button>
+            </div>
+            <pre><code id="outputArea" class="language-plaintext"></code></pre>
             <div id="continuationControls" style="display: none;">
-                <button id="continueBtn">Continuar...</button>
+                <button id="continueBtn">Sí, Continuar...</button>
             </div>
         </div>
         <div id="loading" style="display:none;">Cargando...</div>
         <div id="error" style="color: red; display:none;"></div>
     </div>
 
+    <!-- Highlight.js script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
