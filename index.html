@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestro de Codificación AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Maestro de Codificación AI</h1>
+        <p>Tu asistente experto para generar código y obtener soluciones.</p>
+
+        <div class="input-section">
+            <textarea id="promptInput" placeholder="Describe el código o la solución que necesitas... (Ej: 'Un script Python para leer un CSV', 'Cómo implementar CORS en Node.js')" rows="10"></textarea>
+            <div class="button-group">
+                <button id="generateCodeBtn">Generar Código</button>
+                <button id="getSolutionBtn">Obtener Solución</button>
+            </div>
+            <div class="model-selection">
+                <label for="aiModel">Modelo AI:</label>
+                <select id="aiModel">
+                    <option value="gemini">Google Gemini</option>
+                    <option value="openai">OpenAI (GPT)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Resultado:</h2>
+            <pre id="outputArea"></pre>
+            <div id="continuationControls" style="display: none;">
+                <button id="continueBtn">Continuar...</button>
+            </div>
+        </div>
+        <div id="loading" style="display:none;">Cargando...</div>
+        <div id="error" style="color: red; display:none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
